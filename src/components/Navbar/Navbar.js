@@ -45,7 +45,7 @@ const Navbar = props => {
                 props.logout();
                 props.setRedirect('/signin');
               }}>Sign out</div>
-              : <Link to="/signin" className={path === '/signin' ? 'active' : ''}>Sign In | Sign Up</Link>}
+              : <Link to="/signin" className={path === '/signin' ? 'active' : ''}>Empire[ X ]</Link>}
             {props.loggedUser ?
               <Link to={`/$${props.loggedUser.username}`} className="avatar">
                 <img

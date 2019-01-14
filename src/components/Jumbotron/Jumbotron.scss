@@ -1,0 +1,102 @@
+@mixin button {
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: .55s;
+    overflow: hidden;
+    width: 100vw;
+    max-width: 150px;
+    justify-self: center;
+    padding: 10px 0;
+    &:active {
+        color: '';
+    }
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 5px $color-primary;
+    }
+    &:before {
+        content: '';
+        opacity: .5s;
+        filter: blur(30px);
+        transform: translateX(-130px) skewX(-15deg);
+    }
+    &:after {
+        content: '';
+        opacity: 0;
+        filter: blur(30px);
+        transform: translate(-100px) scaleX(-15deg);
+    }
+    &:hover {
+        color: white;
+        background: rgb(255, 190, 213);
+        &:before {
+            transform: translateX(300px) skewX(-15deg);
+            opacity: .6;
+            transition: .7s;
+        }
+        &:after {
+            transform: translateX(300px) skewX(-15deg);
+            opacity: 1;
+            transition: .7s;
+        }
+    }
+}
+
+
+
+.jumbotron {
+   
+    height: 200px;
+    img {
+
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        width: 100%;
+        height: auto;
+        display: block;
+        position: relative;
+        filter: sepia(100%) saturate(200%) brightness(55%) hue-rotate(70deg);
+    }
+    .banner-text {
+        .header {
+            font-weight: bold;
+            font-size: 40px;
+        }
+        p {
+            font-size: 16px;
+        }
+        top: 30%;
+        position: absolute;
+        padding: 50px 0;
+        color: #eee;
+        text-align: center;
+        width: 100%;
+    }
+    .button {
+        justify-self: center;
+        background-color: black;
+        position: absolute;
+        top: 55%;
+        left: 44%;
+        @include button();
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .banner-text {
+        .header {
+            font-size: 25px !important;
+        }
+        .p {
+            font-size: 10px !important;
+        }
+        top: 40px !important;
+    }
+    .button {
+        top: 230px !important;
+        left: 120px !important;
+    }
+}
