@@ -1,0 +1,59 @@
+body.hasHover {
+    .side-drawer a {
+        &:hover {
+            background-color: lighten(rgb(24, 24, 24), 8%);
+            &,
+            i {
+                color: palevioletred;
+            }
+        }
+    }
+}
+
+.side-drawer {
+    height: max-content;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: max-content;
+    max-width: 400px;
+    z-index: 200;
+    transform: translateY(-105%);
+    transition: transform 0.15s ease-out;
+}
+
+.side-drawer.open {
+    transform: translateY(0);
+}
+
+.side-drawer ul {
+    padding: 60px 0 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-drawer li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.side-drawer a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 10px;
+    &:active,&:hover {
+        color: $color-primary;
+    }
+}
+
+@media (min-width: 769px) {
+    .side-drawer {
+        display: none;
+    }
+}
