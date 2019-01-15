@@ -29,7 +29,7 @@
     }
     &:hover {
         color: white;
-        background: rgb(255, 190, 213);
+        background: $color-primary;
         &:before {
             transform: translateX(300px) skewX(-15deg);
             opacity: .6;
@@ -46,41 +46,39 @@
 
 
 .jumbotron {
-   
-    height: 200px;
-    img {
-
-        position: relative;
+        text-align: center;
+        background-image: url("https://images.pexels.com/photos/1036808/pexels-photo-1036808.jpeg?cs=srgb&dl=business-computer-desk-1036808.jpg&fm=jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 50% 50%;
-        width: 100%;
-        height: auto;
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 10% 80% 10%;
+        height: min-content;
         display: block;
-        position: relative;
-        filter: sepia(100%) saturate(200%) brightness(55%) hue-rotate(70deg);
-    }
+        // filter: sepia(100%) saturate(200%) brightness(55%) hue-rotate(70deg);
     .banner-text {
+        background-color: rgba(255, 255, 255, 0.571);
+        grid-column-start: 2;
+        grid-row-start: 2;
+        display: grid;
+        
         .header {
             font-weight: bold;
             font-size: 40px;
         }
         p {
-            font-size: 16px;
+            font-size: 14px;
+            width: 70%;
+            justify-self: center;
         }
-        top: 30%;
-        position: absolute;
         padding: 50px 0;
-        color: #eee;
-        text-align: center;
+        color: black;
         width: 100%;
     }
     .button {
-        justify-self: center;
+        margin-top: 10px;
         background-color: black;
-        position: absolute;
-        top: 55%;
-        left: 44%;
         @include button();
     }
 }
@@ -93,10 +91,14 @@
         .p {
             font-size: 10px !important;
         }
-        top: 40px !important;
+        top: 10vh !important;
     }
     .button {
         top: 230px !important;
         left: 120px !important;
     }
+}
+
+@media only screen and (max-width: 768px) {
+    
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import Jumbotron from "../Jumbotron/Jumbotron";
+import Packages from "../Packages/Packages";
 
 class HomePage extends React.Component {
     
@@ -7,6 +8,7 @@ class HomePage extends React.Component {
         return (
             <div className="main-content">
                 <Jumbotron />
+                <Packages />
             </div>
         );
     }

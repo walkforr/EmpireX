@@ -22,19 +22,19 @@ const Navbar = props => {
             <li>
               <Link to="/scoreboard" className={path === '/scoreboard' ? 'active' : ''}>
                 <i className="fa fa-star" />
-                Scoreboard
+                About
               </Link>
             </li>
             <li>
               <Link to="/alerts" className={path === '/alerts' ? 'active' : ''}>
                 <i className="fa fa-bell" />
-                Alerts
+                Work
               </Link>
             </li>
             <li>
               <Link to="/messages" className={path === '/messages' ? 'active' : ''}>
                 <i className="fa fa-envelope" />
-                Messages
+                Contact
               </Link>
             </li>
           </ul>
