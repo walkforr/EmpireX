@@ -8,6 +8,7 @@ class HomePage extends React.Component {
         return (
             <div className="main-content">
                 <Jumbotron />
+                <div className="options">Options</div>
                 <Packages />
             </div>
         );

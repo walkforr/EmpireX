@@ -1,0 +1,53 @@
+//modal
+.modal {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.386);
+    height: 500px;
+    width: 100%;
+    z-index: 999;
+
+    .modal-content {
+        border: black solid .5px;
+        border-radius: 10px;
+        background-color: white;
+        height: 80%;
+        margin: 50px 150px 50px 150px;
+        display: grid;
+        grid-template-columns: 10% 90%;
+        grid-template-rows: 10% 90%;
+
+        h2 {
+            grid-column-start: 1;
+            grid-row-start: 1;
+            margin-left: 16px;
+            cursor: pointer;
+        }
+    }
+}
+
+.package {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    display: flex;
+    flex-direction: column;
+    
+
+    .title {
+        font-weight: 100;
+        font-size: 30px;
+    }
+    .description {
+        padding-top: 20px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 580px) {
+    .modal {
+        background: none;
+    }
+   .modal-content {
+       margin: 0 !important;
+   }
+}

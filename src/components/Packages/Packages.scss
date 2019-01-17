@@ -123,6 +123,11 @@
     justify-self: center;
 }
 
+
+.close {
+    display: none;
+}
+
 @media only screen and (max-width: 580px) {
     .package-card {
         min-width: 290px !important;
