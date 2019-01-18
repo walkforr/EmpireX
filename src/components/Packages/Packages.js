@@ -1,5 +1,5 @@
 import React from "react";
-
+import Modal from "./Modal";
 
 const Package = props => (
   <div className={props.className}>
@@ -10,22 +10,6 @@ const Package = props => (
       See More
     </div>
   </div>
-);
-
-const Modal = (props) => (
-    <div className={props.className} style={{
-        transform: props.show ? 'translateY(0vh)' : 'translateY(-100vh)',
-        opacity: props.show ? '1' : '0'
-    }}>
-        <div className="modal-content">
-        <h2 onClick={props.close}>X</h2>
-        <div className="package">
-            <div className="title">{props.title}</div>
-            <div className="description">{props.description}</div>
-            <div className="puchase">{props.purchaseBtn}</div>
-        </div>
-        </div>
-    </div>
 );
 
 class Packages extends React.Component {
@@ -52,9 +36,6 @@ class Packages extends React.Component {
     className="modal"
     show={this.state.isShowing}
     close={this.closeModalHandler}
-    description="Web pack"
-    purchaseBtn="Paypal"
-    title="Web Options"
     />
         <div className="packages">
           <Package

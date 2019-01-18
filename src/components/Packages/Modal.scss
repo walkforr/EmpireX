@@ -13,7 +13,7 @@
         height: 80%;
         margin: 50px 150px 50px 150px;
         display: grid;
-        grid-template-columns: 10% 90%;
+        grid-template-columns: 10% 80% 10%;
         grid-template-rows: 10% 90%;
 
         h2 {
@@ -30,7 +30,6 @@
     grid-column-start: 2;
     display: flex;
     flex-direction: column;
-    
 
     .title {
         font-weight: 100;
@@ -49,5 +48,6 @@
     }
    .modal-content {
        margin: 0 !important;
+       height: max-content !important;
    }
 }

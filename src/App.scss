@@ -1,11 +1,13 @@
 @import './components/HomePage/HomePage.scss';
 @import './components/Backdrop/Backdrop.scss';
 @import './components/Navbar/Navbar.scss';
-@import './components//SideDrawer/SideDrawer.scss';
+@import './components/SideDrawer/SideDrawer.scss';
 @import './components/SideDrawer/DrawerToggleButton.scss';
 @import './components/Jumbotron/Jumbotron.scss';
 @import './components/Packages/Packages.scss';
 @import './components/Packages/Modal.scss';
+@import './components/Packages/Slideshow.scss';
+@import './components/Packages/Paypal.scss';
 
 footer {
   height: 60px;
